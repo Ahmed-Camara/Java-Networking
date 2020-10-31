@@ -70,8 +70,7 @@ public class server extends Application{
 					double monthlyPayment = 
 							getMonthlyPayment(annual_interest_rate,number_years,loan_amount);
 					
-					double totalPayment =
-							getMonthlyPayment(annual_interest_rate,number_years,loan_amount) * number_years * 12;
+					double totalPayment = monthlyPayment * number_years * 12;
 					
 					Platform.runLater(()->{
 						connection_information.appendText("\nMonthly Payment: "+
